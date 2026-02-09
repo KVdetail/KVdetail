@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --orange: #ff6a00;
-            --orange-hover: #ff8533;
+            --yellow: #ffcc00;
+            --yellow-hover: #ffdb4d;
             --black: #0a0a0a;
             --dark-grey: #1a1a1a;
             --white: #ffffff;
@@ -18,7 +18,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, var(--black) 0%, #2c1100 100%);
+            background: linear-gradient(135deg, var(--black) 0%, #222200 100%);
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
@@ -27,32 +27,33 @@
         header {
             padding: 60px 20px;
             text-align: center;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
         }
 
         h1 { 
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2rem, 8vw, 3.5rem); 
-            color: var(--orange);
+            font-size: clamp(2.5rem, 10vw, 4rem); 
+            color: var(--yellow);
             text-transform: uppercase;
             letter-spacing: 4px;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.3);
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 10px; }
 
         .card {
             background: var(--dark-grey);
-            border-left: 5px solid var(--orange);
+            border-left: 5px solid var(--yellow);
             border-radius: 10px;
             padding: clamp(20px, 5vw, 40px);
             margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
 
         .btn {
             display: inline-block;
-            background: var(--orange);
+            background: var(--yellow);
             color: var(--black);
             padding: 16px 40px;
             border-radius: 5px;
@@ -64,9 +65,9 @@
         }
 
         .btn:hover {
-            background: var(--orange-hover);
+            background: var(--yellow-hover);
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 106, 0, 0.4);
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.5);
         }
 
         /* Slider Styling */
@@ -81,21 +82,20 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             padding-bottom: 15px;
-            -webkit-overflow-scrolling: touch; /* Plynulé scrollování na iOS */
+            -webkit-overflow-scrolling: touch;
             scrollbar-width: none; 
         }
 
         .video-track::-webkit-scrollbar { display: none; }
 
         .video-item {
-            min-width: 260px; /* Trochu užší pro mobily */
+            min-width: 260px;
             max-width: 300px;
             aspect-ratio: 9/16; 
             background: #000;
             border-radius: 15px;
             border: 2px solid #333;
             overflow: hidden;
-            position: relative;
         }
 
         video { 
@@ -112,7 +112,7 @@
         }
 
         .nav-btn {
-            background: var(--orange);
+            background: var(--yellow);
             border: none;
             color: black;
             padding: 12px 18px;
@@ -120,33 +120,45 @@
             font-weight: bold;
             border-radius: 5px;
             margin-left: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .contact-link { color: var(--orange); text-decoration: none; font-weight: bold; }
+        .contact-link { 
+            color: var(--yellow); 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.2rem;
+            transition: opacity 0.3s;
+        }
 
-        footer { text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem; }
+        .contact-link:hover { opacity: 0.8; }
+
+        .phone-number {
+            display: block;
+            margin-top: 15px;
+            font-size: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>KVdetail</h1>
-        <p>PREMIUM AUTO DETAILING</p>
+        <p style="letter-spacing: 2px;">PREMIUM AUTO CARE</p>
     </header>
 
     <div class="container">
         
         <section class="card" style="text-align: center;">
             <h2>DOKONALOST V KAŽDÉM DETAILU</h2>
-            <p>Vraťte svému vozu lesk, který si zaslouží.</p>
-            <a href="https://detailing-vozidel.reservio.com/booking" class="btn">Rezervovat termín</a>
+            <p>Špičková péče o lak a interiér vašeho vozu.</p>
+            <a href="https://detailing-vozidel.reservio.com/booking" class="btn" target="_blank">Rezervovat termín</a>
         </section>
 
         <section class="card">
-            <h2 style="margin-bottom: 20px; color: var(--orange);">NAŠE PRÁCE</h2>
+            <h2 style="margin-bottom: 20px; color: var(--yellow);">NAŠE PRÁCE</h2>
             
             <div class="video-slider-container">
                 <div class="nav-controls">
@@ -172,7 +184,8 @@
 
         <section class="card" style="text-align: center;">
             <h2>KONTAKT</h2>
-            <p>Máte dotaz? Ozvěte se nám.</p>
+            <p>Máte dotaz? Zavolejte nám nebo napište.</p>
+            <a href="tel:+420606073921" class="contact-link phone-number">+420 606 073 921</a>
             <p style="margin-top: 10px;">Email: <a href="mailto:kvdetail@gmail.com" class="contact-link">kvdetail@gmail.com</a></p>
         </section>
 
