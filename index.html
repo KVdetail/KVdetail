@@ -89,13 +89,18 @@
 
         .video-item {
             min-width: 300px;
-            aspect-ratio: 9/16; /* Vertikální videa */
+            aspect-ratio: 9/16; 
             background: #000;
             border-radius: 10px;
             border: 1px solid #333;
+            overflow: hidden;
         }
 
-        iframe { width: 100%; height: 100%; border-radius: 10px; border: none; }
+        video { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover;
+        }
 
         .nav-btn {
             background: var(--orange);
@@ -139,17 +144,17 @@
                 </div>
                 
                 <div class="video-track" id="track">
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V12_ani8j6"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V10_uuwkfj"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V11_afw2cn"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V5_imgnqc"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V1_zz4s9w"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V7_x2s6xg"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V9_adrrsr"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V4_jwnm4h"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V8_xnr5bt"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V2_dxttew"></iframe></div>
-                    <div class="video-item"><iframe src="https://player.cloudinary.com/embed/?cloud_name=drjfvblwk&public_id=V3_roelbq"></iframe></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V12_ani8j6.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V10_uuwkfj.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V11_afw2cn.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V5_imgnqc.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V1_zz4s9w.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V7_x2s6xg.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V9_adrrsr.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V4_jwnm4h.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V8_xnr5bt.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V2_dxttew.mp4" type="video/mp4"></video></div>
+                    <div class="video-item"><video controls preload="metadata"><source src="https://res.cloudinary.com/drjfvblwk/video/upload/V3_roelbq.mp4" type="video/mp4"></video></div>
                 </div>
             </div>
         </section>
